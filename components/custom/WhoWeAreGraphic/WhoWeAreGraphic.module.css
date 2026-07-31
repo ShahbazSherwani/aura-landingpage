@@ -1,0 +1,44 @@
+.container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* No scroll-driven motion here (unlike HeroGraphics), but kept visible so
+   * a future extension of this animation isn't fighting a clipped viewport. */
+  overflow: visible;
+}
+
+/* ---------------------------------------------------------------------------
+ * Idle float loop — whole illustration
+ *
+ * Targets the SVG group id "animate-up-and-down" via the quoted attribute-
+ * selector form, not a plain `#id` selector: Turbopack's CSS Modules rewrites
+ * plain `#id` selectors to a scoped/hashed id (like it does `.class`), which
+ * silently breaks the match against the real, unscoped id baked into the SVG
+ * markup. `[id="..."]` is left alone, same as HeroGraphics' badge float
+ * (which additionally *needs* this form because its id has spaces — but the
+ * scoping issue applies regardless of spaces). Runs continuously, independent
+ * of scroll position. Same duration/easing/amplitude as HeroGraphics.module
+ * .css's badge float, kept in its own uniquely-named keyframe
+ * (`whoWeAreFloat`, not `pesoFloat`) so the two stay independent if both are
+ * ever on the page together.
+ * ------------------------------------------------------------------------- */
+
+.container [id="animate-up-and-down"] {
+  animation: whoWeAreFloat 3.75s ease-in-out infinite;
+}
+
+@keyframes whoWeAreFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container [id="animate-up-and-down"] {
+    animation: none;
+  }
+}

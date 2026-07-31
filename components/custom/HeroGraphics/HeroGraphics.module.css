@@ -1,0 +1,40 @@
+.container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* The scatter groups drift well outside the SVG box while scrolling
+   * (see the GSAP scrub in index.tsx) — don't clip them at the edge... */
+  overflow: visible;
+  /* ...and don't let them intercept clicks on surrounding UI as they pass
+   * over it; the whole illustration is decorative. */
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------------------------
+ * Idle float loop — peso badge
+ *
+ * Targets the SVG group id "animate up and down loop" (a Figma layer name;
+ * the spaces are legal in an id and a quoted attribute selector handles them).
+ * Runs continuously and is fully independent of the scroll-driven scatter,
+ * which lives in index.tsx as a GSAP ScrollTrigger timeline.
+ * ------------------------------------------------------------------------- */
+
+.container [id="animate up and down loop"] {
+  animation: pesoFloat 3.75s ease-in-out infinite;
+}
+
+@keyframes pesoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container [id="animate up and down loop"] {
+    animation: none;
+  }
+}

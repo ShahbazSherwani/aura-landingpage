@@ -2,7 +2,6 @@ import { WhoWeAreGraphic } from "@/components/custom/WhoWeAreGraphic";
 import { SectionPill } from "@/components/custom/SectionPill";
 import SplitText from "../reactbits/SplitText";
 
-
 export function WhoWeAre() {
   return (
     <section id="about" className="w-full py-20 sm:py-28 bg-red">
@@ -18,23 +17,23 @@ export function WhoWeAre() {
             <div className="mt-4 flex flex-col gap-2.5">
               <p>
                 Aurora was built on a simple belief: funding shouldn't be a
-                privilege reserved for the well-connected. Across the Philippines,
-                small and growing businesses have the drive, the discipline, and
-                the demand. What they don't always have is access to capital that
-                understands them.
+                privilege reserved for the well-connected. Across every market
+                we serve, small and growing businesses have the drive, the
+                discipline, and the demand. What they don't always have is
+                access to capital that understands them.
               </p>
               <p>
-                Aurora Vault is the platform that bridges that
-                gap. Lenders provide capital directly to Aurora Vault, and our
-                team deploys those funds — within the mandate of each lender's
-                selected vault — into carefully evaluated real-world lending and
-                investment opportunities. Every step is structured, tracked, and
-                built for accountability.
+                Aurora Vault is the platform that bridges that gap. Lenders
+                provide capital directly to Aurora Vault, and our team deploys
+                those funds — within the mandate of each lender's selected vault
+                — into carefully evaluated real-world lending and investment
+                opportunities. Every step is structured, tracked, and built for
+                accountability.
               </p>
               <p>
-                We're not here to reinvent finance
-                overnight. We're here to make it work better, for the businesses
-                that need it, and the people willing to back them.
+                We're not here to reinvent finance overnight. We're here to make
+                it work better, for the businesses that need it, and the people
+                willing to back them.
               </p>
             </div>
           </div>

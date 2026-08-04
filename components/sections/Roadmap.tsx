@@ -65,7 +65,7 @@ const roadmapMilestones = [
     quarter: "Q4 2027",
     title: "Nationwide Reach",
     description:
-      "Full coverage of underserved lending corridors across the Philippines, at scale.",
+      "Full coverage of underserved lending corridors, nationwide at scale.",
   },
 ];
 

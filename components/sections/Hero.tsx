@@ -12,6 +12,7 @@ import { DURATION_CASCADE, EASE_OUT } from "@/lib/motion";
 import Aurora from "../reactbits/Aurora";
 import SplitText from "../reactbits/SplitText";
 import SpecularButton from '../reactbits/SpecularButton';
+import { Icons } from "../ui/icons";
 
 export function Hero() {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
@@ -57,7 +58,7 @@ export function Hero() {
           />
 
           <p ref={paragraphRef} className="text-[1.563rem]">
-            Where everyday capital becomes real opportunity for Filipino entrepreneurs.
+            Where everyday capital becomes real opportunity for growing entrepreneurs.
           </p>
 
           <div ref={buttonsRef} className="flex flex-col gap-5 sm:flex-row">
@@ -74,7 +75,8 @@ export function Hero() {
               onClick={() => console.log('clicked')}
             >
               <span className="inline-flex items-center gap-2">
-                Learn More
+                <Icons.book className="size-5" />
+                Download Whitepaper
               </span>
             </SpecularButton>
           </div>

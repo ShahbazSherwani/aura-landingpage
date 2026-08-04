@@ -27,7 +27,7 @@ const CARD_OFFSET = 40;
 
 const whyAuroraFeatures = [
   {
-    title: "Purpose-Built for Real Businesses",
+    title: "Purpose-Built for the Philippines",
     description: "Every vault is designed around real, local financing needs.",
     icon: purposeIcon,
   },

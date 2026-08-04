@@ -85,7 +85,7 @@
   --breakpoint-2xl: 1366px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sansation);
+  --font-sans: var(--font-manrope);
   --font-mono: var(--font-geist-mono);
   /* Body-copy font, used by the base `p` rule below and applied directly
    * (via the `font-body` utility) anywhere else that should match — e.g.

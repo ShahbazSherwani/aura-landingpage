@@ -3,12 +3,9 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
 import { Icons } from "@/components/ui/icons";
 
 import SpecularButton from '../reactbits/SpecularButton';
-import auroraWordmark from "@/app/assets/aurora-logo-colored-wordmark.png";
-import auroraLogomark from "@/app/assets/aurora-logo-colored-logomark.png";
 
 
 export function Header() {
@@ -36,32 +33,15 @@ export function Header() {
           // smoothly with the color/blur change instead of snapping —
           // ease-in-out (not ease-out) because this is a morph (size +
           // color together), not a pure entrance.
-          "relative mx-auto flex max-w-full items-center justify-between rounded-[10px] transition-[background-color,border-color,box-shadow,backdrop-filter,max-width,padding] duration-[450ms] ease-[cubic-bezier(0.77,0,0.175,1)]",
+          "relative mx-auto flex max-w-full items-center justify-between rounded-[10px] px-4 py-3 transition-[background-color,border-color,box-shadow,backdrop-filter,max-width] duration-[450ms] ease-[cubic-bezier(0.77,0,0.175,1)] sm:px-6",
           scrolled && "lg:max-w-350",
           scrolled
-            ? "border border-white/20 bg-background/60 px-3 py-2 shadow-lg backdrop-blur-md sm:px-4"
-            : "border border-transparent bg-transparent px-4 py-3 shadow-none backdrop-blur-none sm:px-6"
+            ? "border border-white/20 bg-background/60 shadow-lg backdrop-blur-md"
+            : "border border-transparent bg-transparent shadow-none backdrop-blur-none"
         )}
       >
-        <Link href="#top" aria-label="Aurora — go to top" className="grid shrink-0 items-center">
-          <Image
-            src={auroraWordmark}
-            alt=""
-            priority
-            className={cn(
-              "col-start-1 row-start-1 h-20 w-auto transition-opacity duration-[450ms] ease-[cubic-bezier(0.77,0,0.175,1)] md:h-15 lg:h-22",
-              scrolled ? "opacity-0" : "opacity-100"
-            )}
-          />
-          <Image
-            src={auroraLogomark}
-            alt=""
-            priority
-            className={cn(
-              "col-start-1 row-start-1 h-10 w-auto transition-opacity duration-[450ms] ease-[cubic-bezier(0.77,0,0.175,1)] md:h-12 lg:h-15",
-              scrolled ? "opacity-100" : "opacity-0"
-            )}
-          />
+        <Link href="#top" className="text-3xl text-primary font-black tracking-tight md:text-2xl lg:text-3xl">
+          AURORA
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -92,9 +72,9 @@ export function Header() {
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu-panel"
-            className="relative z-10 inline-flex size-12 shrink-0 touch-manipulation items-center justify-center rounded-[10px] border border-white/15 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
+            className="relative z-10 inline-flex size-9 shrink-0 touch-manipulation items-center justify-center rounded-[10px] border border-white/15 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
           >
-            {menuOpen ? <Icons.close className="size-8" /> : <Icons.menu className="size-8" />}
+            {menuOpen ? <Icons.close className="size-4" /> : <Icons.menu className="size-5" />}
           </button>
         </div>
 

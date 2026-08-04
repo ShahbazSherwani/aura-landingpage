@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Sansation, Didact_Gothic } from "next/font/google";
+import { Manrope, Didact_Gothic } from "next/font/google";
 import { SiteBackground } from "@/components/custom/SiteBackground";
 import { SmoothScroll } from "@/components/custom/SmoothScroll";
 import "./globals.css";
 
-const sansation = Sansation({
-  variable: "--font-sansation",
-  weight: ["300", "400", "700"],
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -34,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sansation.variable} ${didactGothic.variable} h-full antialiased`}
+      className={`${manrope.variable} ${didactGothic.variable} h-full antialiased`}
     >
       <body
         className="min-h-full flex flex-col overflow-x-hidden"

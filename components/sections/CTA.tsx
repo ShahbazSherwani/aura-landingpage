@@ -4,6 +4,7 @@ import { SectionPill } from "../custom/SectionPill";
 import SplitText from "../reactbits/SplitText";
 import MagicRings from "../reactbits/MagicRings";
 import SpecularButton from "../reactbits/SpecularButton";
+import { Icons } from "../ui/icons";
 
 export function CTA() {
   return (
@@ -60,10 +61,11 @@ export function CTA() {
           </SpecularButton>
           <SpecularButton
             variant="secondary"
-            onClick={() => console.log("clicked")}
+            onClick={() => console.log('clicked')}
           >
             <span className="inline-flex items-center gap-2">
-              Download White Paper
+              <Icons.book className="size-5" />
+              Download Whitepaper
             </span>
           </SpecularButton>
         </div>

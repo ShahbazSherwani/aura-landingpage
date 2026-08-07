@@ -1,14 +1,4 @@
-// Generated verbatim from app/assets/hero-graphics-aurora-coin.svg — do not hand-edit.
-// Kept as a plain string constant (not an asset import) so it can be injected as
-// real, addressable inline SVG via dangerouslySetInnerHTML: Turbopack always
-// resolves `.svg` imports through Next's static-asset pipeline (giving a URL),
-// so there's no reliable per-import way to pull the raw markup out directly.
-//
-// Animation hook ids present in this export (from the Figma layer names):
-//   'animate up and down loop'  — floating badge/coin group (id contains spaces)
-//   'scatter-top-left' / 'scatter-top-right' / 'scatter-bottom-left' / 'scatter-bottom-right'
-// All other ids are untouched decoration.
-export const heroGraphicsMarkup = `<svg width="401" height="385" viewBox="0 0 401 385" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="401" height="385" viewBox="0 0 401 385" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="hero-graphics-aurora-coin">
 <g id="OBJECTS">
 <g id="Group">
@@ -2470,4 +2460,4 @@ export const heroGraphicsMarkup = `<svg width="401" height="385" viewBox="0 0 40
 <stop offset="0.69" stop-color="#65A3FB"/>
 </linearGradient>
 </defs>
-</svg>`;
+</svg>

@@ -39,7 +39,7 @@ export function Header() {
           "relative mx-auto flex max-w-full items-center justify-between rounded-[10px] transition-[background-color,border-color,box-shadow,backdrop-filter,max-width,padding] duration-[450ms] ease-[cubic-bezier(0.77,0,0.175,1)]",
           scrolled && "lg:max-w-350",
           scrolled
-            ? "border border-white/20 bg-background/60 px-3 py-2 shadow-lg backdrop-blur-md sm:px-4"
+            ? "border border-white/20 bg-background/60 px-3 py-1 shadow-lg backdrop-blur-md sm:px-4"
             : "border border-transparent bg-transparent px-4 py-3 shadow-none backdrop-blur-none sm:px-6"
         )}
       >

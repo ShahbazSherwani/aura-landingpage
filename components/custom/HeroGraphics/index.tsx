@@ -24,8 +24,8 @@ export const FLOAT_TARGET_ID = "animate up and down loop";
 // Scroll-scrubbed drift: as the user scrolls past the graphic, each of the 4
 // peripheral groups drifts outward along its own diagonal (away from the
 // scene center), tumbling slightly and fading to nothing — and it reverses
-// if the user scrolls back up. Distances are SVG user units (viewBox
-// 463x385), so they scale with the rendered size of the graphic; at the
+// if the user scrolls back up. Distances are SVG user units (the graphic's
+// viewBox), so they scale with the rendered size of the graphic; at the
 // hero's max width they travel roughly 250-350 screen px, well outside the
 // SVG box and into the surrounding page.
 const SCATTER_DRIFTS = [

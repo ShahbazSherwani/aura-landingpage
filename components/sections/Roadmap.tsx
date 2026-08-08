@@ -150,7 +150,7 @@ export function Roadmap() {
     <section
       id="roadmap"
       ref={sectionRef}
-      className="w-full overflow-hidden py-20 sm:py-28"
+      className="w-full overflow-hidden pt-20 pb-20 sm:pt-12.5 sm:pb-28 min-[1440px]:pt-12.5"
     >
       <div className="container-px relative mx-auto flex max-w-350 flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-4">

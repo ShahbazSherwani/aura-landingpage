@@ -200,27 +200,43 @@
     @apply px-5 sm:px-6 lg:px-8;
   }
 
-  /* Hollow, glowing-outline digit style (countdown timer). Transparent fill +
-   * a stroke keeps the glyph hollow like a neon tube; the layered text-shadow
-   * is what actually reads as "glow". Both the stroke width and the blur
-   * radii are deliberately small relative to the glyph — a digit's counter
-   * (the hole in a "0") is only ~20-25% of its width, so a stroke or blur
-   * that's too generous bridges straight across it and the glyph reads as
-   * solid instead of hollow. Sized in `em` so this ratio holds at every
-   * breakpoint, not just the one it was tuned against. */
+  /* Glowing neon digit style (countdown timer). A normal, solidly-filled
+   * glyph already renders "0"/"6"/"8"/"9" with their counters (the enclosed
+   * hole in the letterform) unfilled — that's just how font outlines work,
+   * no transparent-fill-plus-stroke trick needed. The earlier version fought
+   * this by forcing an opaque fill across the *entire* glyph body with a
+   * thin colored stroke at the edge; for digits with little or no natural
+   * counter (a "1", a "7") that meant the glyph was almost all dark fill
+   * with a sliver of teal, reading as "black text" rather than "glowing
+   * digit". Solid teal fill + a layered glow is both simpler and correct:
+   * the glow naturally hugs both the outer silhouette and the inner counter
+   * boundary, since text-shadow follows the glyph's actual alpha shape. */
   .neon-digit {
-    color: transparent;
+    color: var(--primary);
     /* Sansation is only loaded at 300/400/700 — without this, requesting a
      * heavier weight than what's loaded makes the browser fake it by
-     * thickening the glyph outline itself, which fights the hollow stroke
-     * below and can close up the counters entirely. */
+     * thickening the glyph outline, which shrinks already-small counters
+     * (the hole in a "0") until they read as solid. */
     font-synthesis: none;
-    -webkit-text-stroke: 0.06em var(--primary);
-    text-stroke: 0.06em var(--primary);
     text-shadow:
-      0 0 0.015em var(--primary),
-      0 0 0.05em var(--primary),
-      0 0 0.1em color-mix(in srgb, var(--primary) 60%, transparent),
-      0 0 0.2em color-mix(in srgb, var(--primary) 35%, transparent);
+      0 0 0.03em var(--primary),
+      0 0 0.08em var(--primary),
+      0 0 0.18em color-mix(in srgb, var(--primary) 60%, transparent),
+      0 0 0.36em color-mix(in srgb, var(--primary) 35%, transparent);
+  }
+
+  /* Same glow, for the StrokeText-rendered digits. StrokeText draws a real
+   * SVG stroke with fill="none" (fillMode="none"), so unlike the CSS
+   * text-stroke approach, the hollow counter is a genuine gap in the vector
+   * path — not an approximation that font-synthesis or anti-aliasing can
+   * wash out. `filter: drop-shadow` (not text-shadow, which SVG <text>
+   * doesn't support the same way) follows that exact stroke shape, so the
+   * glow can be as soft/wide as it wants without ever bridging the hole. */
+  .neon-stroke-text {
+    filter:
+      drop-shadow(0 0 0.03em var(--primary))
+      drop-shadow(0 0 0.08em var(--primary))
+      drop-shadow(0 0 0.18em color-mix(in srgb, var(--primary) 60%, transparent))
+      drop-shadow(0 0 0.36em color-mix(in srgb, var(--primary) 35%, transparent));
   }
 }

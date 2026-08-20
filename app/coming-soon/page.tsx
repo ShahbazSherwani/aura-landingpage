@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ComingSoonPage() {
   return (
-    <main>
+    <main className="min-w-0">
       <ComingSoon />
     </main>
   );

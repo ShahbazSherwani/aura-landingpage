@@ -37,7 +37,7 @@ export function CountdownTimer() {
       {UNITS.map((unit, i) => (
         <div key={unit.key} className="flex items-start gap-2.5 sm:gap-5 lg:gap-6">
           <div className="flex flex-col items-center gap-2">
-            <span className="font-sans text-4xl font-extrabold tabular-nums text-foreground sm:text-6xl lg:text-7xl">
+            <span className="neon-digit font-sans text-4xl font-bold tabular-nums sm:text-6xl lg:text-7xl">
               {String(timeLeft ? timeLeft[unit.key] : 0).padStart(2, "0")}
             </span>
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 sm:text-xs">
@@ -45,7 +45,7 @@ export function CountdownTimer() {
             </span>
           </div>
           {i < UNITS.length - 1 && (
-            <span className="pt-0.5 font-sans text-4xl font-extrabold text-primary sm:pt-1 sm:text-6xl lg:text-7xl">
+            <span className="neon-digit pt-0.5 font-sans text-4xl font-bold sm:pt-1 sm:text-6xl lg:text-7xl">
               :
             </span>
           )}

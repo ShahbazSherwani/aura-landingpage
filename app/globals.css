@@ -199,4 +199,28 @@
   .container-px {
     @apply px-5 sm:px-6 lg:px-8;
   }
+
+  /* Hollow, glowing-outline digit style (countdown timer). Transparent fill +
+   * a stroke keeps the glyph hollow like a neon tube; the layered text-shadow
+   * is what actually reads as "glow". Both the stroke width and the blur
+   * radii are deliberately small relative to the glyph — a digit's counter
+   * (the hole in a "0") is only ~20-25% of its width, so a stroke or blur
+   * that's too generous bridges straight across it and the glyph reads as
+   * solid instead of hollow. Sized in `em` so this ratio holds at every
+   * breakpoint, not just the one it was tuned against. */
+  .neon-digit {
+    color: transparent;
+    /* Sansation is only loaded at 300/400/700 — without this, requesting a
+     * heavier weight than what's loaded makes the browser fake it by
+     * thickening the glyph outline itself, which fights the hollow stroke
+     * below and can close up the counters entirely. */
+    font-synthesis: none;
+    -webkit-text-stroke: 0.06em var(--primary);
+    text-stroke: 0.06em var(--primary);
+    text-shadow:
+      0 0 0.015em var(--primary),
+      0 0 0.05em var(--primary),
+      0 0 0.1em color-mix(in srgb, var(--primary) 60%, transparent),
+      0 0 0.2em color-mix(in srgb, var(--primary) 35%, transparent);
+  }
 }

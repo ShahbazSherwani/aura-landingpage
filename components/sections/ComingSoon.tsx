@@ -1,24 +1,20 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import { CountdownTimer } from "@/components/custom/CountdownTimer";
 import { SectionPill } from "@/components/custom/SectionPill";
-import { Icons } from "@/components/ui/icons";
 import auroraWordmark from "@/app/assets/aurora-logo-colored-wordmark.png";
 
 import Aurora from "../reactbits/Aurora";
 import SplitText from "../reactbits/SplitText";
 import SpecularButton from "../reactbits/SpecularButton";
+import CurvedInput from "../reactbits/CurvedInput";
 
 export function ComingSoon() {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log("waitlist signup:", email);
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
   };
 
   return (
@@ -40,43 +36,47 @@ export function ComingSoon() {
         </SpecularButton>
       </header>
 
-      <div className="container-px mx-auto flex max-w-350 flex-1 flex-col items-center justify-center gap-8 py-16 text-center sm:gap-10">
-        <SectionPill label="Something Big Is Coming" />
-
-        <SplitText
-          lines={[{ text: "Aurora Is" }, { text: "Almost Here", className: "text-primary" }]}
-          tag="h1"
-        />
-
-        <CountdownTimer />
-
-        <div className="flex flex-col items-center gap-3">
-          <h2>Get Early Access</h2>
-          <p className="max-w-125">
-            We&apos;re putting the finishing touches on Aurora. Join the waitlist to be
-            first in line when we open the doors.
-          </p>
+      <div className="container-px mx-auto flex max-w-350 flex-1 flex-col items-center justify-center gap-9 py-16 text-center sm:gap-10">
+        <div className="flex max-w-350 flex-1 flex-col items-center justify-center gap-2">
+          <div className="flex flex-col items-center gap-4">
+            <SectionPill label="Something Big Is Coming" />
+            <SplitText
+              lines={[{ text: "Coming Soon" }]}
+              tag="h1"
+            />
+          </div>
+          <CountdownTimer />
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="flex w-full max-w-125 flex-col gap-3 sm:flex-row"
-        >
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
+        <div className="container-px relative flex flex-col gap-6 items-center mx-auto max-w-350">
+          <div className="flex flex-col items-center">
+            <SplitText
+              text="Get Early Access"
+              tag="h2"
+              textAlign="center"
+            />
+            <p className="max-w-162.5 text-center">
+              We&apos;re putting the finishing touches on Aurora. Join the waitlist to be
+                first in line when we open the doors.
+            </p>
+          </div>
+          <CurvedInput
             placeholder="Your email address"
-            className="font-body h-13 w-full flex-1 rounded-[10px] border border-white/15 bg-white/5 px-4 text-base text-white outline-none transition-colors placeholder:text-white/40 focus:border-primary/60"
+            buttonText="Join Waitlist"
+            theme="dark"
+            bend={28}
+            height={64}
+            width={450}
+            backgroundColor="#13132A"
+            textColor="#ffffff"
+            placeholderColor="rgba(255,255,255,0.4)"
+            borderColor="rgba(255,255,255,0.15)"
+            buttonColor="#2AD9B7"
+            buttonTextColor="#090916"
+            shadowColor="#000000"
+            onSubmit={(value) => console.log("waitlist signup:", value)}
           />
-          <SpecularButton type="submit" variant="primary" className="shrink-0">
-            <span className="inline-flex items-center gap-2">
-              <Icons.rocket className="size-5" />
-              Join Waitlist
-            </span>
-          </SpecularButton>
-        </form>
+        </div>
       </div>
     </section>
   );

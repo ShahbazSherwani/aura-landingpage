@@ -10,6 +10,7 @@ import auroraWordmark from "@/app/assets/aurora-logo-colored-wordmark.png";
 import Aurora from "../reactbits/Aurora";
 import SplitText from "../reactbits/SplitText";
 import CurvedInput from "../reactbits/CurvedInput";
+import { WaitlistAccess } from "@/components/sections/WaitlistAccess";
 
 export function ComingSoon() {
   const handleAnimationComplete = () => {
@@ -58,8 +59,10 @@ export function ComingSoon() {
              get which, combined with the flex ancestors' default
              min-width:auto, refused to shrink below ~450px on narrow
              viewports. */}
-          <div className="w-full min-w-0 max-w-112.5">
-            <CurvedInput
+          <div className="w-full">
+            <WaitlistAccess/>
+          
+            {/* <CurvedInput
               placeholder="Your email address"
               buttonText="Join Waitlist"
               theme="dark"
@@ -74,7 +77,7 @@ export function ComingSoon() {
               buttonTextColor="#090916"
               shadowColor="#000000"
               onSubmit={(value) => console.log("waitlist signup:", value)}
-            />
+            /> */}
           </div>
         </div>
       </div>

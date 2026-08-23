@@ -9,7 +9,7 @@ const APP_URL = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-
 
 export function WaitlistAccess() {
   return (
-    <section id="waitlist" className="relative w-full bg-background py-20 sm:py-24">
+    <section id="waitlist" className="relative w-full py-20 sm:py-24">
       <div className="container-px mx-auto max-w-350">
         <div className="mx-auto flex max-w-220 flex-col gap-6 text-center">
           <div className="flex flex-col items-center gap-4">
@@ -35,9 +35,9 @@ export function WaitlistAccess() {
                 Join Waitlist
               </span>
             </SpecularButton>
-            <SpecularButton variant="secondary" onClick={() => window.location.href = APP_URL}>
+            {/* <SpecularButton variant="secondary" onClick={() => window.location.href = APP_URL}>
               <span className="inline-flex items-center gap-2">Open Investor Portal</span>
-            </SpecularButton>
+            </SpecularButton> */}
           </div>
         </div>
       </div>

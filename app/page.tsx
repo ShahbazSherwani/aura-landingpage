@@ -8,22 +8,24 @@ import { ExploreTheVaults } from "@/components/sections/ExploreTheVaults";
 import { WhyAurora } from "@/components/sections/WhyAurora";
 import { Roadmap } from "@/components/sections/Roadmap";
 import { WaitlistAccess } from "@/components/sections/WaitlistAccess";
+import {ComingSoon} from "@/components/sections/ComingSoon";
 
 export default function Home() {
   return (
     <>
       <main>
-        <Hero />
+        {/* <Hero />
         <Whitepaper />
         <WhoWeAre />
         <HowItWorks />
         <WaitlistAccess />
         <ExploreTheVaults />
-        <WhyAurora />
-        <Roadmap />
-        <CTA />
+        <WhyAurora /> */}
+        <ComingSoon />
+        {/* <Roadmap />
+        <CTA /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -14,6 +14,7 @@ import auroraLogomark from "@/app/assets/aurora-logo-colored-logomark.png";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -25,6 +26,7 @@ export function Header() {
   const navLinks = [
     { link: "#who-we-are", ariaLabel: 'Go to home page', label: "Who We Are" },
     { link: "#how-it-works", ariaLabel: 'Go to home page', label: "How It Works" },
+    { link: "#waitlist", ariaLabel: 'Go to waitlist section', label: "Waitlist" },
     { link: "#why-aurora", ariaLabel: 'Go to home page', label: "Why Aurora" },
   ];
 
@@ -78,7 +80,7 @@ export function Header() {
 
         <div className="flex items-center gap-6">
           <div className="hidden md:block">
-            <SpecularButton variant="primary" onClick={() => console.log('clicked')}>
+            <SpecularButton variant="primary" onClick={() => window.location.href = appUrl}>
               <span className="inline-flex items-center gap-2">
                 <Icons.rocket className="size-5" />
                 Get Started
@@ -122,7 +124,7 @@ export function Header() {
               className="mt-2 w-full justify-center"
               onClick={() => {
                 setMenuOpen(false);
-                console.log('clicked');
+                window.location.href = appUrl;
               }}
             >
               <span className="inline-flex items-center gap-2">

@@ -15,6 +15,7 @@ import SpecularButton from '../reactbits/SpecularButton';
 import { Icons } from "../ui/icons";
 
 export function Hero() {
+  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -64,7 +65,7 @@ export function Hero() {
           <div ref={buttonsRef} className="flex flex-col gap-5 sm:flex-row">
             <SpecularButton
               variant="primary"
-              onClick={() => console.log('clicked')}
+              onClick={() => window.location.href = appUrl}
             >
               <span className="inline-flex items-center gap-2">
                 Get Started
@@ -72,7 +73,7 @@ export function Hero() {
             </SpecularButton>
             <SpecularButton
               variant="secondary"
-              onClick={() => console.log('clicked')}
+              onClick={() => window.location.href = "#whitepaper"}
             >
               <span className="inline-flex items-center gap-2">
                 <Icons.book className="size-5" />

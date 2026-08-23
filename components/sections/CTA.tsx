@@ -7,6 +7,7 @@ import SpecularButton from "../reactbits/SpecularButton";
 import { Icons } from "../ui/icons";
 
 export function CTA() {
+  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
   return (
     <section
       id="cta"
@@ -55,13 +56,13 @@ export function CTA() {
         <div className="flex flex-col gap-5 pt-10 sm:flex-row">
           <SpecularButton
             variant="primary"
-            onClick={() => console.log("clicked")}
+            onClick={() => window.location.href = appUrl}
           >
             <span className="inline-flex items-center gap-2">Get Started</span>
           </SpecularButton>
           <SpecularButton
             variant="secondary"
-            onClick={() => console.log('clicked')}
+            onClick={() => window.location.href = "#whitepaper"}
           >
             <span className="inline-flex items-center gap-2">
               <Icons.book className="size-5" />

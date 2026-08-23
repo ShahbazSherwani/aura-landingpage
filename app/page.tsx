@@ -7,6 +7,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ExploreTheVaults } from "@/components/sections/ExploreTheVaults";
 import { WhyAurora } from "@/components/sections/WhyAurora";
 import { Roadmap } from "@/components/sections/Roadmap";
+import { WaitlistAccess } from "@/components/sections/WaitlistAccess";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Whitepaper />
         <WhoWeAre />
         <HowItWorks />
+        <WaitlistAccess />
         <ExploreTheVaults />
         <WhyAurora />
         <Roadmap />

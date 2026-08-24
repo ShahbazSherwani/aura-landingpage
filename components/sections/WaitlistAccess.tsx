@@ -6,10 +6,11 @@ import SpecularButton from "../reactbits/SpecularButton";
 import { Icons } from "../ui/icons";
 
 const APP_URL = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
+const WAITLIST_REGISTRATION_URL = `${APP_URL.replace(/\/+$/, "")}/#register`;
 
 export function WaitlistAccess() {
   return (
-    <section id="waitlist" className="relative w-full py-20 sm:py-24">
+    <section id="waitlist" className="relative w-full py-4 sm:py-8">
       <div className="container-px mx-auto max-w-350">
         <div className="mx-auto flex max-w-220 flex-col gap-6 text-center">
           <div className="flex flex-col items-center gap-4">
@@ -29,7 +30,7 @@ export function WaitlistAccess() {
           </div>
 
           <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
-            <SpecularButton variant="primary" onClick={() => window.location.href = APP_URL}>
+            <SpecularButton variant="primary" onClick={() => window.location.href = WAITLIST_REGISTRATION_URL}>
               <span className="inline-flex items-center gap-2">
                 <Icons.rocket className="size-5" />
                 Join Waitlist

@@ -14,7 +14,7 @@ import auroraLogomark from "@/app/assets/aurora-logo-colored-logomark.png";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
+  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://app.auroraxp.io/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);

@@ -15,7 +15,7 @@ import SpecularButton from '../reactbits/SpecularButton';
 import { Icons } from "../ui/icons";
 
 export function Hero() {
-  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
+  const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://app.auroraxp.io/";
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);

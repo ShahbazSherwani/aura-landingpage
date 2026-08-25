@@ -5,7 +5,7 @@ import SplitText from "../reactbits/SplitText";
 import SpecularButton from "../reactbits/SpecularButton";
 import { Icons } from "../ui/icons";
 
-const APP_URL = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://auravault-3h4s.vercel.app/";
+const APP_URL = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://app.auroraxp.io/";
 const WAITLIST_REGISTRATION_URL = `${APP_URL.replace(/\/+$/, "")}/#register`;
 
 export function WaitlistAccess() {

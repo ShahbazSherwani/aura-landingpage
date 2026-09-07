@@ -17,8 +17,8 @@ const didactGothic = Didact_Gothic({
 });
 
 export const metadata: Metadata = {
-  title: "Aurora — Placeholder Title",
-  description: "Placeholder description for the Aurora landing page.",
+  title: "Aurora XP",
+  description: "Aurora XP connects lenders with carefully evaluated lending and investment opportunities, helping growing businesses access the capital they need.",
 };
 
 export const viewport: Viewport = {

@@ -99,7 +99,15 @@ export function Whitepaper() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <SpecularButton variant="primary" onClick={() => console.log("clicked")}>
+          <SpecularButton
+            variant="primary"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/aurora-whitepaper.pdf";
+              link.download = "Aurora Whitepaper.pdf";
+              link.click();
+            }}
+          >
             <span className="inline-flex items-center gap-2">Download Whitepaper</span>
           </SpecularButton>
         </div>

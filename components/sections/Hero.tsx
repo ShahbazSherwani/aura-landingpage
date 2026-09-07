@@ -73,7 +73,12 @@ export function Hero() {
             </SpecularButton>
             <SpecularButton
               variant="secondary"
-              onClick={() => window.location.href = "#whitepaper"}
+              onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/aurora-whitepaper.pdf";
+              link.download = "Aurora Whitepaper.pdf";
+              link.click();
+            }}
             >
               <span className="inline-flex items-center gap-2">
                 <Icons.book className="size-5" />

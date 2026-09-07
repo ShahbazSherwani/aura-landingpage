@@ -17,12 +17,12 @@ const whitepaperHighlights = [
   {
     title: "The Lending Model",
     description:
-      "How you lend to Aurora Vault, and how Aurora Vault deploys that capital into vetted real-world opportunities.",
+      "How you lend to Aurora XP, and how Aurora XP deploys that capital into vetted real-world opportunities.",
     icon: lendingModelIcon,
   },
   {
     title: "SecureNests & TrustBoxes",
-    description: "The two vault categories and how each manages risk.",
+    description: "The two XP categories and how each manages risk.",
     icon: vaultIcon,
   },
   {
@@ -34,7 +34,7 @@ const whitepaperHighlights = [
   {
     title: "Transparency & Reporting",
     description:
-      "What you can expect to see about vault performance and fund deployment.",
+      "What you can expect to see about XP performance and fund deployment.",
     icon: transparencyIcon,
   },
   {
@@ -60,14 +60,14 @@ export function Whitepaper() {
             <div className="flex flex-col gap-4">
               <SectionPill label="Learn Before You Lend" />
               <SplitText
-                text="Read the Aurora Vault White Paper"
+                text="Read the Aurora XP White Paper"
                 tag="h2"
                 onLetterAnimationComplete={handleAnimationComplete}
               />
             </div>
             <p className="mt-4">
               Before you commit capital, understand exactly how it works. The
-              Aurora Vault White Paper breaks down our lending structure, our
+              Aurora XP White Paper breaks down our lending structure, our
               two vault categories, and the systems that keep your funds tracked
               and accountable from the moment you contribute to the moment
               returns are paid out.

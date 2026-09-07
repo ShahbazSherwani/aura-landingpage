@@ -16,12 +16,12 @@ const steps = [
     description: "Choose the risk profile that fits you — SecureNest for stability, TrustBox for growth.",
   },
   {
-    title: "Lend to Aurora Vault",
+    title: "Lend to Aurora XP",
     description:
       "Advance your USDT under a clear lending agreement. Your funds convert into Aura Points at a fixed 1:1 rate.",
   },
   {
-    title: "Aurora Vault Deploys Your Capital",
+    title: "Aurora XP Deploys Your Capital",
     description:
       "Your Aura Points convert into AURA XP and are allocated into your selected vault's real-world opportunities.",
   },

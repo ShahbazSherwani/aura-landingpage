@@ -14,18 +14,18 @@ export default function Home() {
   return (
     <>
       <main>
-        {/* <Hero />
+        <Hero />
         <Whitepaper />
         <WhoWeAre />
         <HowItWorks />
         <WaitlistAccess />
         <ExploreTheVaults />
-        <WhyAurora /> */}
-        <ComingSoon />
-        {/* <Roadmap />
-        <CTA /> */}
+        <WhyAurora />
+       
+        <Roadmap />
+        <CTA />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

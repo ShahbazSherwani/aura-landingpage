@@ -96,7 +96,7 @@ export function WhyAurora() {
   );
 
   return (
-    <section id="about" className="w-full py-20 sm:py-28 bg-red">
+    <section id="why-aurora" className="w-full py-20 sm:py-28 bg-red">
       <div className="container-px relative flex flex-col items-center mx-auto max-w-350 gap-8">
         <div className="flex flex-col items-center gap-4">
           <SectionPill label="Why Aurora" />

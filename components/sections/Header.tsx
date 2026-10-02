@@ -24,10 +24,10 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { link: "/#who-we-are", ariaLabel: 'Go to home page', label: "Who We Are" },
-    { link: "/#how-it-works", ariaLabel: 'Go to home page', label: "How It Works" },
-    { link: "/#waitlist", ariaLabel: 'Go to waitlist section', label: "Waitlist" },
-    { link: "/#why-aurora", ariaLabel: 'Go to home page', label: "Why Aurora" },
+    { link: "#who-we-are", ariaLabel: 'Go to home page', label: "Who We Are" },
+    { link: "#how-it-works", ariaLabel: 'Go to home page', label: "How It Works" },
+    { link: "#waitlist", ariaLabel: 'Go to waitlist section', label: "Waitlist" },
+    { link: "#why-aurora", ariaLabel: 'Go to home page', label: "Why Aurora" },
   ];
 
   return (
@@ -45,7 +45,7 @@ export function Header() {
             : "border border-transparent bg-transparent px-4 py-3 shadow-none backdrop-blur-none sm:px-6"
         )}
       >
-        <Link href="/#top" aria-label="Aurora — go to top" className="grid shrink-0 items-center">
+        <Link href="#top" aria-label="Aurora — go to top" className="grid shrink-0 items-center">
           <Image
             src={auroraWordmark}
             alt=""

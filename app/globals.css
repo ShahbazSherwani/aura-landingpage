@@ -200,6 +200,33 @@
     @apply px-5 sm:px-6 lg:px-8;
   }
 
+  .faq-topic-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--surface);
+  }
+
+  .faq-topic-scrollbar::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .faq-topic-scrollbar::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: var(--surface);
+  }
+
+  .faq-topic-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: var(--primary);
+  }
+
+  .faq-topic-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #90F0D8;
+  }
+
+  .faq-topic-scrollbar::-webkit-scrollbar-button {
+    display: none;
+  }
+
   /* Glowing neon digit style (countdown timer). A normal, solidly-filled
    * glyph already renders "0"/"6"/"8"/"9" with their counters (the enclosed
    * hole in the letterform) unfilled — that's just how font outlines work,

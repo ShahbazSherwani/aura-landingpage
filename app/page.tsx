@@ -9,6 +9,7 @@ import { WhyAurora } from "@/components/sections/WhyAurora";
 import { Roadmap } from "@/components/sections/Roadmap";
 import { WaitlistAccess } from "@/components/sections/WaitlistAccess";
 import {ComingSoon} from "@/components/sections/ComingSoon";
+import { FAQ } from "@/components/sections/FAQ";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <WhyAurora />
        
         <Roadmap />
+        <FAQ />
         <CTA />
       </main>
       <Footer />

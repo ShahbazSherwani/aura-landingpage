@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { Discord } from "@/components/svgs/discord";
+import { Facebook } from "@/components/svgs/facebook";
+import { XformerlyTwitter } from "@/components/svgs/x";
 
 const footerColumns = [
   {
@@ -9,6 +12,12 @@ const footerColumns = [
     title: "Legal",
     links: ["Privacy", "Terms"],
   },
+];
+
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/auroraxp.official", Icon: Facebook },
+  { label: "X", href: "https://x.com/auroraxp_", Icon: XformerlyTwitter },
+  { label: "Discord", href: "https://discord.gg/cr7sxt6pk", Icon: Discord }
 ];
 
 export function Footer() {
@@ -42,6 +51,25 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          <div>
+            <h3 className="font-medium">Follow Us</h3>
+            <ul className="mt-3 flex gap-4">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Aurora on ${label}`}
+                    className="inline-block transition-opacity hover:opacity-80"
+                  >
+                    <Icon className="size-6" aria-hidden="true" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <p className="mt-10 border-t border-border pt-6 text-sm">

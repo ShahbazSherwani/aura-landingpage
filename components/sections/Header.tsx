@@ -24,10 +24,11 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { link: "#who-we-are", ariaLabel: 'Go to home page', label: "Who We Are" },
-    { link: "#how-it-works", ariaLabel: 'Go to home page', label: "How It Works" },
-    { link: "#waitlist", ariaLabel: 'Go to waitlist section', label: "Waitlist" },
-    { link: "#why-aurora", ariaLabel: 'Go to home page', label: "Why Aurora" },
+    { link: "#who-we-are", ariaLabel: 'Go to Who We Are section', label: "Who We Are" },
+    { link: "#how-it-works", ariaLabel: 'Go to How It Works section', label: "How It Works" },
+    { link: "#waitlist", ariaLabel: 'Go to Waitlist section', label: "Waitlist" },
+    { link: "#why-aurora", ariaLabel: 'Go to Why Aurora section', label: "Why Aurora" },
+    { link: "#faqs", ariaLabel: 'Go to FAQs section', label: "FAQs" },
   ];
 
   return (

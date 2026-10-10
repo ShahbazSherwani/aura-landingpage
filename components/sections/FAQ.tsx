@@ -41,7 +41,7 @@ const faqItems = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="w-full py-20 sm:py-28">
+    <section id="faqs" className="w-full py-20 sm:py-28">
       <div className="container-px mx-auto max-w-350">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div className="flex flex-col items-start gap-5 lg:sticky lg:top-32 lg:h-fit">

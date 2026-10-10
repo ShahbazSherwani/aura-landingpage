@@ -31,7 +31,11 @@ const organizationSchema = {
     "USDT lending",
     "Investment vaults",
   ],
-  sameAs: ["https://www.facebook.com/auroraxp.official"],
+    sameAs: [
+    "https://www.facebook.com/auroraxp.official",
+    "https://x.com/auroraxp_",
+    "https://discord.gg/cr7sxt6pk",
+  ],
 };
 
 const websiteSchema = {

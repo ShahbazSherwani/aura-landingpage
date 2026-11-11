@@ -13,11 +13,15 @@ export function RewardsMotion({ children }: { children: ReactNode }) {
 
   useGSAP(() => {
     const media = gsap.matchMedia();
-    media.add("(prefers-reduced-motion: no-preference)", () => {
+    media.add({
+      desktop: "(min-width: 901px)",
+      reduceMotion: "(prefers-reduced-motion: reduce)",
+    }, (context) => {
+      const { desktop, reduceMotion } = context.conditions!;
       const page = root.current;
       if (!page) return;
 
-      page.querySelectorAll<HTMLElement>(".sec-head, .card, .diagram, .compare, .quote, .table-scroll, .faq details, .cta").forEach((element) => {
+      if (!reduceMotion) page.querySelectorAll<HTMLElement>(".sec-head, .card, .diagram, .compare, .quote, .table-scroll, .faq details, .cta").forEach((element) => {
         gsap.from(element, {
           autoAlpha: 0,
           y: 24,
@@ -28,7 +32,8 @@ export function RewardsMotion({ children }: { children: ReactNode }) {
       });
 
       const flow = page.querySelector<HTMLElement>(".flow");
-      if (!flow) return;
+      const lifecycle = page.querySelector<HTMLElement>("#lifecycle");
+      if (!flow || !lifecycle) return;
       const dots = flow.querySelectorAll<HTMLElement>(".dot");
       const measureTrack = () => {
         const lastStep = dots[dots.length - 1]?.parentElement;
@@ -37,10 +42,15 @@ export function RewardsMotion({ children }: { children: ReactNode }) {
       measureTrack();
       const timeline = gsap.timeline({
         scrollTrigger: {
-          trigger: flow,
-          start: "top 75%",
-          end: "bottom 40%",
-          scrub: SCRUB_LAG,
+          trigger: desktop && !reduceMotion ? lifecycle : flow,
+          start: desktop && !reduceMotion ? "top 120px" : "top 70%",
+          end: desktop && !reduceMotion ? "+=1200" : "bottom 45%",
+          // Keep the desktop journey in view long enough to read each step.
+          pin: desktop && !reduceMotion ? lifecycle : false,
+          anticipatePin: 1,
+          // Color changes still follow scroll with reduced motion, without
+          // pinning, movement, or a delayed catch-up animation.
+          scrub: reduceMotion ? true : SCRUB_LAG,
           invalidateOnRefresh: true,
           onRefreshInit: measureTrack,
         },

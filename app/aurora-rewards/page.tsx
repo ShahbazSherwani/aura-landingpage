@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
+import { RewardsMotion } from "@/components/sections/RewardsMotion";
 import "./rewards.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default function RewardsPage() {
   const appUrl = process.env.NEXT_PUBLIC_AURAVAULT_APP_URL || "https://app.auroraxp.io/";
   return <>
     <Header />
-    <main className="aurora-rewards">
+    <RewardsMotion>
       <svg width="0" height="0" aria-hidden="true" className="absolute"><defs><linearGradient id="rewards-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#2ad9b7" /><stop offset="1" stopColor="#8b6cff" /></linearGradient></defs></svg>
       <header className="hero" id="top">
   <div className="wrap">
@@ -275,7 +276,7 @@ export default function RewardsPage() {
 
 
       <div className="wrap disclaimer"><p>Aura Points (AP) are participation units within the Aurora XP platform. Rewards described here are subject to the full Referral &amp; Rewards Program terms, eligibility checks and applicable laws, and may be amended or withdrawn. Vault participation involves risk, including possible loss of capital; returns are not guaranteed. Nothing on this page is investment advice.</p></div>
-    </main>
+    </RewardsMotion>
     <Footer />
   </>;
 }

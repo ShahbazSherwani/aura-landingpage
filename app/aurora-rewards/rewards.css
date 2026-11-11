@@ -137,6 +137,38 @@
 }
 
 /* Match the marketing site's shared type, container, and glass-card system. */
+.aurora-rewards .flow::before { background: rgba(255,255,255,.14); opacity: 1; }
+.aurora-rewards .flow::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(var(--flow-progress, 0));
+  transform-origin: left center;
+  pointer-events: none;
+}
+.aurora-rewards .step { z-index: 1; }
+@media (max-width: 900px) {
+  .aurora-rewards .flow::before, .aurora-rewards .flow::after {
+    top: 31px;
+    bottom: auto;
+    left: 31px;
+    right: auto;
+    width: 2px;
+    height: var(--flow-height, calc(100% - 64px));
+  }
+  .aurora-rewards .flow::after {
+    transform: scaleY(var(--flow-progress, 0));
+    transform-origin: center top;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora-rewards .flow { --flow-progress: 1; }
+  .aurora-rewards .step .dot { background: var(--primary); border-color: var(--primary); color: var(--bg); box-shadow: 0 0 0 6px var(--bg); }
+}
 .aurora-rewards { --radius: 16px; line-height: 1.65; }
 .aurora-rewards .wrap { max-width: 1400px; padding-inline: clamp(20px, 4vw, 80px); }
 .aurora-rewards h1, .aurora-rewards h2, .aurora-rewards h3, .aurora-rewards h4, .aurora-rewards .display, .aurora-rewards .stat .v, .aurora-rewards .big, .aurora-rewards .dot, .aurora-rewards .quote { font-family: var(--font-sansation), sans-serif; }

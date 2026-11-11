@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
+      url: `${SITE_URL}/aurora-rewards`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${SITE_URL}/`,
       lastModified,
       changeFrequency: "weekly",

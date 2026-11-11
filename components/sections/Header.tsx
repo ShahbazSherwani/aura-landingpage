@@ -24,11 +24,12 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { link: "#who-we-are", ariaLabel: 'Go to Who We Are section', label: "Who We Are" },
-    { link: "#how-it-works", ariaLabel: 'Go to How It Works section', label: "How It Works" },
-    { link: "#waitlist", ariaLabel: 'Go to Waitlist section', label: "Waitlist" },
-    { link: "#why-aurora", ariaLabel: 'Go to Why Aurora section', label: "Why Aurora" },
-    { link: "#faqs", ariaLabel: 'Go to FAQs section', label: "FAQs" },
+    { link: "/#who-we-are", ariaLabel: 'Go to Who We Are section', label: "Who We Are" },
+    { link: "/#how-it-works", ariaLabel: 'Go to How It Works section', label: "How It Works" },
+    { link: "/#waitlist", ariaLabel: 'Go to Waitlist section', label: "Waitlist" },
+    { link: "/#why-aurora", ariaLabel: 'Go to Why Aurora section', label: "Why Aurora" },
+    { link: "/aurora-rewards", ariaLabel: 'Explore Aurora Rewards', label: "Rewards" },
+    { link: "/#faqs", ariaLabel: 'Go to FAQs section', label: "FAQs" },
   ];
 
   return (
@@ -67,11 +68,12 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 xl:flex">
           {navLinks.map((link) => (
             <Link
               key={link.link}
               href={link.link}
+              aria-label={link.ariaLabel}
               className="font-body text-base text-white transition-colors hover:text-primary"
             >
               {link.label}
@@ -80,7 +82,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-6">
-          <div className="hidden md:block">
+          <div className="hidden xl:block">
             <SpecularButton variant="primary" onClick={() => window.location.href = appUrl}>
               <span className="inline-flex items-center gap-2">
                 <Icons.rocket className="size-5" />
@@ -95,7 +97,7 @@ export function Header() {
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu-panel"
-            className="relative z-10 inline-flex size-12 shrink-0 touch-manipulation items-center justify-center rounded-[10px] border border-white/15 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
+            className="relative z-10 inline-flex size-12 shrink-0 touch-manipulation items-center justify-center rounded-[10px] border border-white/15 bg-white/5 text-white transition-colors hover:bg-white/10 xl:hidden"
           >
             {menuOpen ? <Icons.close className="size-8" /> : <Icons.menu className="size-8" />}
           </button>
@@ -104,7 +106,7 @@ export function Header() {
         {menuOpen && (
           <div
             id="mobile-menu-panel"
-            className="animate-in fade-in-0 slide-in-from-top-2 absolute right-0 top-[calc(100%+12px)] w-56 max-w-[calc(100vw-2.5rem)] rounded-[10px] border border-white/10 bg-background/95 p-2 shadow-2xl backdrop-blur-xl duration-200 ease-out md:hidden"
+            className="animate-in fade-in-0 slide-in-from-top-2 absolute right-0 top-[calc(100%+12px)] w-56 max-w-[calc(100vw-2.5rem)] rounded-[10px] border border-white/10 bg-background/95 p-2 shadow-2xl backdrop-blur-xl duration-200 ease-out xl:hidden"
           >
             <nav className="flex flex-col">
               {navLinks.map((link) => (

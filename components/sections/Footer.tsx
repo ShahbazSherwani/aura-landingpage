@@ -6,7 +6,7 @@ import { XformerlyTwitter } from "@/components/svgs/x";
 const footerColumns = [
   {
     title: "Site Links",
-    links: ["Who We Are", "How It Works", "Why Aurora"],
+    links: ["Who We Are", "How It Works", "Why Aurora", "Rewards"],
   },
   {
     title: "Legal",
@@ -41,7 +41,7 @@ export function Footer() {
                 {column.links.map((link) => (
                   <li key={link}>
                     <Link
-                      href="#"
+                      href={link === "Rewards" ? "/aurora-rewards" : column.title === "Site Links" ? `/#${link.toLowerCase().replaceAll(" ", "-")}` : "#"}
                       className="text-sm transition-colors hover:text-primary"
                     >
                       {link}

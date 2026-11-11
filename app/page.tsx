@@ -10,6 +10,7 @@ import { Roadmap } from "@/components/sections/Roadmap";
 import { WaitlistAccess } from "@/components/sections/WaitlistAccess";
 import {ComingSoon} from "@/components/sections/ComingSoon";
 import { FAQ } from "@/components/sections/FAQ";
+import { Rewards } from "@/components/sections/Rewards";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <WaitlistAccess />
         <ExploreTheVaults />
         <WhyAurora />
+        <Rewards />
        
         <Roadmap />
         <FAQ />

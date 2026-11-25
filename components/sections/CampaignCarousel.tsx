@@ -11,12 +11,12 @@ import SpecularButton from "@/components/reactbits/SpecularButton";
 import styles from "./CampaignCarousel.module.css";
 
 const campaigns = [
-  { name: "Auto Loans", amount: "AP 500,000" },
-  { name: "Swine Breeder", amount: "AP 150,000" },
-  { name: "Swine Fattener", amount: "AP 150,000" },
-  { name: "Small Cooperative", amount: "AP 100,000" },
-  { name: "Printing Firm", amount: "AP 12,000,000" },
-  { name: "Goat Farming", amount: "AP 300,000" },
+  { name: "Auto Loans", amount: "XP 500,000" },
+  { name: "Swine Breeder", amount: "XP 150,000" },
+  { name: "Swine Fattener", amount: "XP 150,000" },
+  { name: "Small Cooperative", amount: "XP 100,000" },
+  { name: "Printing Firm", amount: "XP 12,000,000" },
+  { name: "Goat Farming", amount: "XP 300,000" },
 ];
 
 export function CampaignCarousel() {

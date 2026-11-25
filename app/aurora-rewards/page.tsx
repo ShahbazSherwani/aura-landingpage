@@ -6,7 +6,7 @@ import "./rewards.css";
 
 export const metadata: Metadata = {
   title: "Referral & Rewards Program | Aurora XP",
-  description: "Discover Aurora XP rewards: a 1,000 AP welcome grant, 100 AP per qualified referral, and a recurring 5% earnings share funded by management.",
+  description: "Discover Aurora XP rewards: a 1,000 XP welcome grant, 100 AP per qualified referral, and a recurring 5% earnings share funded by management.",
   alternates: { canonical: "/aurora-rewards" },
 };
 
@@ -49,7 +49,7 @@ export default function RewardsPage() {
         <span className="num">01</span>
         <svg className="icon" viewBox="0 0 48 48" fill="none" stroke="url(#rewards-gradient)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="17" width="34" height="24" rx="3"/><path d="M5 17h38v-6H5z"/><path d="M24 11v30"/><path d="M24 11c-3-6-10-6-10-1s10 1 10 1Zm0 0c3-6 10-6 10-1s-10 1-10 1Z"/></svg>
         <h3>Welcome Grant</h3>
-        <p>Every new member receives <b style={{"color":"#fff"}}>1,000 AP</b> the moment their registration is complete — capital you can put to work from day one.</p>
+        <p>Every new member receives <b style={{"color":"#fff"}}>1,000 XP</b> the moment their registration is complete — capital you can put to work from day one.</p>
         <span className="tag">Granted on registration</span>
       </div>
 
@@ -85,12 +85,12 @@ export default function RewardsPage() {
     <div className="sec-head center">
       <div className="eyebrow">Welcome AP</div>
       <h2>From Grant to <span className="grad">Withdrawal</span></h2>
-      <p>Your 1,000 AP is built to be deployed, not parked. Here is the path it follows.</p>
+      <p>Your 1,000 XP is built to be deployed, not parked. Here is the path it follows.</p>
     </div>
 
     <div className="flow">
       <div className="step"><div className="dot">1</div><div><h4>Register</h4><p>Create your Aurora XP account.</p></div></div>
-      <div className="step"><div className="dot">2</div><div><h4>Receive 1,000 AP</h4><p>Credited to your balance automatically.</p></div></div>
+      <div className="step"><div className="dot">2</div><div><h4>Receive 1,000 XP</h4><p>Credited to your balance automatically.</p></div></div>
       <div className="step lock"><div className="dot">3</div><div><h4>Fund a Vault</h4><p>Allocate the AP to a SecureNest or TrustBox vault.</p></div></div>
       <div className="step lock"><div className="dot">4</div><div><h4>Vault Returns</h4><p>The funded opportunity completes and returns are distributed.</p></div></div>
       <div className="step"><div className="dot">5</div><div><h4>Withdraw</h4><p>Returned AP is now available to withdraw.</p></div></div>
@@ -213,7 +213,7 @@ export default function RewardsPage() {
       </div>
       <div className="card">
         <svg className="icon" viewBox="0 0 48 48" fill="none" stroke="url(#rewards-gradient)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="10" y="20" width="28" height="20" rx="3"/><path d="M16 20v-5a8 8 0 0 1 16 0"/><circle cx="24" cy="30" r="3"/></svg>
-        <h3>Why the 1,000 AP is invested first</h3>
+        <h3>Why the 1,000 XP is invested first</h3>
         <p>The welcome grant is not a giveaway to be cashed out. It is shared income meant to work: once it funds a vault, it generates activity, and when that vault returns, the AP becomes yours to withdraw.</p>
       </div>
     </div>
@@ -233,7 +233,7 @@ export default function RewardsPage() {
     <div className="table-scroll"><table className="table">
       <thead><tr><th>Event</th><th>Basis</th><th>You receive</th></tr></thead>
       <tbody>
-        <tr><td>You register</td><td>Welcome grant</td><td className="amt">1,000 AP</td></tr>
+        <tr><td>You register</td><td>Welcome grant</td><td className="amt">1,000 XP</td></tr>
         <tr><td>3 referrals join fully funded vaults</td><td>3 × 100 AP</td><td className="amt">300 AP</td></tr>
         <tr><td>Referrals each receive 800 AP in earnings</td><td>5% × 800 AP × 3, from management's share</td><td className="amt">120 AP</td></tr>
         <tr className="total"><td>Total rewards</td><td></td><td className="amt t">1,420 AP</td></tr>
@@ -250,10 +250,10 @@ export default function RewardsPage() {
       <h2>Clear Answers. <span className="grad">Built-In Trust.</span></h2>
     </div>
     <div className="faq">
-      <details open><summary>When do I receive the 1,000 AP?</summary><p>Immediately upon completing registration. It is credited to your Aurora XP balance automatically.</p></details>
+      <details open><summary>When do I receive the 1,000 XP?</summary><p>Immediately upon completing registration. It is credited to your Aurora XP balance automatically.</p></details>
       <details open><summary>Can I withdraw the welcome AP right away?</summary><p>No. It must first be used to fund a vault. When that vault's investment returns, the AP returned to you can be withdrawn.</p></details>
       <details open><summary>Is there a catch?</summary><p>No hidden one. The rewards are a portion of management's income that would otherwise be spent on outside marketing partners. Instead, it is shared with participants in exchange for income-generating activity, and nothing is deducted from anyone's principal or earnings.</p></details>
-      <details open><summary>Why must the 1,000 AP be invested before withdrawal?</summary><p>Because the grant comes from shared income tied to platform activity. Funding a vault puts it to work; once that vault returns, the AP can be withdrawn.</p></details>
+      <details open><summary>Why must the 1,000 XP be invested before withdrawal?</summary><p>Because the grant comes from shared income tied to platform activity. Funding a vault puts it to work; once that vault returns, the AP can be withdrawn.</p></details>
       <details><summary>What counts as a qualified referral?</summary><p>An individual you referred who participates in a vault that becomes fully funded. You receive 100 AP for each such individual.</p></details>
       <details><summary>Does my referral earn less because of me?</summary><p>No. The 5% share is paid from management's portion of the income. Your referral receives exactly what they would have received without a referrer.</p></details>
       <details><summary>When is the 5% paid?</summary><p>At the same time your referred participant receives their income or earnings, so both payments arrive together.</p></details>
@@ -267,7 +267,7 @@ export default function RewardsPage() {
     <div className="cta">
       <div className="eyebrow">Start Earning</div>
       <h2>Invite. Fund. Earn.</h2>
-      <p>Register to receive your 1,000 AP welcome grant, then share your referral link to start building rewards alongside the people you bring in.</p>
+      <p>Register to receive your 1,000 XP welcome grant, then share your referral link to start building rewards alongside the people you bring in.</p>
       <a className="btn" href={appUrl}>Get Started</a>
     </div>
   </div>

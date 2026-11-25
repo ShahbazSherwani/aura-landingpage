@@ -4,7 +4,7 @@ import { Card } from "@/components/custom/Card";
 import { SectionPill } from "@/components/custom/SectionPill";
 
 const rewards = [
-  { value: "1,000 AP", title: "A welcome to put to work", description: "Receive your welcome grant when you register. Fund a vault to begin the path to withdrawal.", Icon: Gift },
+  { value: "1,000 XP", title: "A welcome to put to work", description: "Receive your welcome grant when you register. Fund a vault to begin the path to withdrawal.", Icon: Gift },
   { value: "100 AP", title: "Bring someone along", description: "Earn a reward for each person you refer who joins a vault that reaches full funding.", Icon: Users },
   { value: "5%", title: "Share in their success", description: "Receive a recurring share of your referrals’ earnings, paid from management’s portion.", Icon: TrendingUp },
 ];

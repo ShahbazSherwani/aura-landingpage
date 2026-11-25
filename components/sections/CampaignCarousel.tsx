@@ -83,7 +83,7 @@ export function CampaignCarousel() {
         <ul ref={trackRef} id="campaigns-track" tabIndex={0} aria-label="Active campaigns" aria-roledescription="carousel" onKeyDown={onKeyDown} data-lenis-prevent className={`${styles.track} faq-topic-scrollbar mt-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary`}>
           {campaigns.map((campaign) => (
             <li key={campaign.name} className={styles.slide}>
-              <Card className="h-full">
+              <Card className={`${styles.card} h-full`}>
                 <Image src={vaultImage} alt="Aurora XP vault" sizes="(min-width: 1280px) 260px, (min-width: 1024px) 28vw, (min-width: 768px) 42vw, 80vw" className="mx-auto h-40 w-full object-contain sm:h-44" />
                 <h3 className="mt-5 line-clamp-2 min-h-[2.6em]">{campaign.name}</h3>
                 <p className="mt-2 whitespace-nowrap text-primary">{campaign.amount}</p>

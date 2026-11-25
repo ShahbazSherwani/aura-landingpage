@@ -11,12 +11,14 @@ import { WaitlistAccess } from "@/components/sections/WaitlistAccess";
 import {ComingSoon} from "@/components/sections/ComingSoon";
 import { FAQ } from "@/components/sections/FAQ";
 import { Rewards } from "@/components/sections/Rewards";
+import { CampaignCarousel } from "@/components/sections/CampaignCarousel";
 
 export default function Home() {
   return (
     <>
       <main>
         <Hero />
+        <CampaignCarousel />
         <Whitepaper />
         <WhoWeAre />
         <HowItWorks />

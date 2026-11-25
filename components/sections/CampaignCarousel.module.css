@@ -1,0 +1,33 @@
+.track {
+  position: relative;
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1.5rem;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .slide { flex-basis: calc((100% - 1.25rem) / 2); }
+}
+
+@media (min-width: 1024px) {
+  .slide { flex-basis: calc((100% - 2.5rem) / 3); }
+}
+
+@media (min-width: 1280px) {
+  .slide { flex-basis: calc((100% - 3.75rem) / 4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta { transition: none; }
+  .cta:active { transform: none; }
+  .cta canvas { display: none; }
+}
